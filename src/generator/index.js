@@ -76,10 +76,9 @@ async function generateSolutionFile(problemName) {
     id: problemData.questionTitle.data.question.questionId,
     title: problemData.questionTitle.data.question.title,
     difficulty: problemData.questionTitle.data.question.difficulty,
-    relatedTopics:
-      problemData.singleQuestionTopicTags.data.question.topicTags.map(
-        (topic) => topic.name
-      ),
+    relatedTopics: problemData.singleQuestionTopicTags.data.question.topicTags
+      .map((topic) => topic.name)
+      .join(", "),
     description: marked.parse(
       problemData.questionContent.data.question.content
     ),

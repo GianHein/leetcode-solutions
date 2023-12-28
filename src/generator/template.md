@@ -1,7 +1,7 @@
 # {{id}}. {{title}}
 
-- Difficulty: {{difficulty}}.
-- Related Topics: {{relatedTopics}}.
+- Difficulty: {{difficulty}}
+- Related Topics: {{relatedTopics}}
 
 ## Problem
 
