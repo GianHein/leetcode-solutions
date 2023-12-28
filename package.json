@@ -1,0 +1,26 @@
+{
+  "name": "leetcode-solutions",
+  "version": "1.0.0",
+  "description": "My solutions to LeetCode problems in JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "create": "node ./src/generator/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GianHein/leetcode-solutions.git"
+  },
+  "keywords": [
+    "leetcode",
+    "solutions",
+    "problems",
+    "javascript",
+    "nodejs"
+  ],
+  "author": "GianHein",
+  "license": "MIT",
+  "devDependencies": {
+    "axios": "^1.6.3",
+    "marked": "^11.1.0"
+  }
+}
