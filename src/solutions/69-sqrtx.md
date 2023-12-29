@@ -45,6 +45,46 @@
  * @return {number}
  */
 
+// This is a binary search implementation.
+var mySqrt = function (x) {
+  // Defining the left and right boundaries of the search
+  let left = 0;
+  let right = x;
+
+  //  Iterating until the left and right boundaries meet
+  while (left <= right) {
+    // Calculating the middle point.
+    // Using (left + right) / 2 would cause an overflow.
+    let mid = left + (right - left) / 2;
+
+    // If the middle point is the square root of x, return it.
+    if (Math.floor(mid * mid) == x) return Math.floor(mid);
+    // If the middle point is greater than the square root of x,
+    // the square root of x is in the left half of the search.
+    if (mid * mid > x) right = mid;
+    // If the middle point is less than the square root of x,
+    // the square root of x is in the right half of the search.
+    if (mid * mid < x) left = mid;
+  }
+};
+
+// Surprisingly, this solution was arguably worse than the previous one.
+// It took 109ms to run and a memory usage of 44.21MB,
+// beating only 11.49% of the submissions.
+// There is most definitely room for optimization on this one.
+```
+
+```javascript
+// This is an old solution that I have submitted.
+// At the time, I did not know that binary search
+// was the expected solution (see related topics).
+// I am keeping it here for reference.
+
+/**
+ * @param {number} x
+ * @return {number}
+ */
+
 // This is a Heron's method implementation.
 // https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Heron's_method
 
