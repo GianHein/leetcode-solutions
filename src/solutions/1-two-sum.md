@@ -57,15 +57,20 @@
  */
 
 var twoSum = function (nums, target) {
+  // Create a map of number to index
   let numIndexMap = new Map();
 
+  // Iterate through the nums array
   for (let i = 0; i <= nums.length - 1; i++) {
+    // If the map has the target - nums[i] (the complement) as a key, return the index of the complement and the current index
     if (numIndexMap.has(target - nums[i]))
       return [numIndexMap.get(target - nums[i]), i];
 
+    // Otherwise, add the current number and index to the map
     numIndexMap.set(nums[i], i);
   }
 
+  // If no solution is found, throw an error
   throw new Error("No two sum solution");
 };
 ```
