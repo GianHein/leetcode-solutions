@@ -24,7 +24,7 @@ To create a new solution, run the following command in the root directory of the
 npm run create <problem_slug>
 ```
 
-wher `<problem_slug>` is the slug of the problem on LeetCode. The command will create a new file in the `src/solutions` according to the format described above and generate the Markdown for the problem in the file.
+where `<problem_slug>` is the slug of the problem on LeetCode. The command will create a new file in the `src/solutions` according to the format described above and generate the Markdown for the problem in the file.
 
 ## License
 
