@@ -91,7 +91,6 @@ async function generateSolutionFile(problemName) {
   );
 
   const fs = require("fs");
-
   if (fs.existsSync(filePath)) {
     console.log("File already exists:", filePath);
     return;
@@ -101,13 +100,11 @@ async function generateSolutionFile(problemName) {
     path.resolve(__dirname, "./template.md"),
     "utf-8"
   );
-
   Object.keys(pageData).forEach((key) => {
     template = template.replace(`{{${key}}}`, pageData[key]);
   });
 
   fs.writeFileSync(filePath, template);
-
   console.log("File created:", filePath);
 }
 
