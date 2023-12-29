@@ -65,6 +65,8 @@ var twoSum = function (nums, target) {
 
     numIndexMap.set(nums[i], i);
   }
+
+  throw new Error("No two sum solution");
 };
 ```
 
